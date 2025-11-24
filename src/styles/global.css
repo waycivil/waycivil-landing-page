@@ -1,0 +1,145 @@
+/* Geist Variable Font */
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* Custom Breakpoints */
+  --breakpoint-tablet: 427px;
+  --breakpoint-laptop: 770px;
+  --breakpoint-full: 1026px;
+  --breakpoint-maxwidth: 1280px;
+
+  /* Max Width */
+  --max-width-content: 1280px;
+
+  /* Fonts */
+  --font-sans: "Geist", sans-serif;
+  --font-mono: ui-monospace, monospace;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-container: var(--container);
+  --color-modal: var(--modal);
+  --color-subtitle: var(--subtitle);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-info: var(--info);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0% 0 0); /* #000 */
+  --foreground: oklch(0.99 0.01 90); /* #FFFEFA */
+  --card: oklch(0.20 0 0);
+  --card-foreground: oklch(0.99 0.01 90);
+  --popover: oklch(0.20 0 0);
+  --popover-foreground: oklch(0.99 0.01 90);
+  --primary: oklch(0.69 0.19 50); /* #F97316 */
+  --primary-hover: oklch(0.74 0.17 55); /* #FB923C */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.63 0.22 25); /* #EF4444 - fail */
+  --border: oklch(0.32 0 0); /* ~#3A3A3A */
+  --input: oklch(0.26 0 0);
+  --ring: oklch(0.708 0 0);
+  --container: oklch(0.26 0 0); /* #2A2A2A */
+  --modal: oklch(0.20 0 0); /* #1A1A1A */
+  --subtitle: oklch(0.73 0 0); /* #B3B3B3 */
+  --success: oklch(0.69 0.15 166); /* #10B981 */
+  --warning: oklch(0.85 0.15 90); /* #FACC15 */
+  --info: oklch(0.61 0.20 255); /* #3B82F6 */
+}
+
+.dark {
+  --background: oklch(0% 0 0); /* #000 */
+  --foreground: oklch(0.99 0.01 90); /* #FFFEFA */
+  --card: oklch(0.20 0 0);
+  --card-foreground: oklch(0.99 0.01 90);
+  --popover: oklch(0.20 0 0);
+  --popover-foreground: oklch(0.99 0.01 90);
+  --primary: oklch(0.69 0.19 50); /* #F97316 */
+  --primary-hover: oklch(0.74 0.17 55); /* #FB923C */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.63 0.22 25); /* #EF4444 - fail */
+  --border: oklch(0.32 0 0); /* ~#3A3A3A */
+  --input: oklch(0.26 0 0);
+  --ring: oklch(0.556 0 0);
+  --container: oklch(0.26 0 0); /* #2A2A2A */
+  --modal: oklch(0.20 0 0); /* #1A1A1A */
+  --subtitle: oklch(0.73 0 0); /* #B3B3B3 */
+  --success: oklch(0.69 0.15 166); /* #10B981 */
+  --warning: oklch(0.85 0.15 90); /* #FACC15 */
+  --info: oklch(0.61 0.20 255); /* #3B82F6 */
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Geist', sans-serif;  /* ← Agregar esto */
+  }
+}
