@@ -34,12 +34,12 @@ const Sidebar: FC<Props> = ({
 
   return (
     <section
-      className={`h-full grow bg-background flex flex-col justify-between w-full ${
+      className={`bg-background max-h-[800px] flex flex-col justify-between w-full ${
         isMobileMenuOpen ? "flex" : "hidden"
       }`}
     >
       {/* Contenedor con scroll */}
-      <div className="grow w-full max-h-[800px] overflow-y-auto">
+      <div className="w-full max-h-[800px] overflow-y-auto">
         <ul className="flex flex-col mx-3 tablet:mx-6 mt-8 text-subtitle overflow-y-auto h-full">
           <Accordion
             type="single"
@@ -66,7 +66,7 @@ const Sidebar: FC<Props> = ({
       </div>
 
       {/* Sign Up Buttons */}
-      <div className=" bg-background border-t border-border w-full p-3 tablet:p-6 flex gap-4">
+      <div className=" absolute bottom-0 bg-background border-t border-border w-full p-3 tablet:p-6 flex gap-4">
         <a className="w-full" href={`${privateSiteUrl}/signup`}>
           <button className="bg-primary text-foreground hover:bg-primary-hover h-8 text-sm font-bold px-3 rounded-md cursor-pointer w-full">
             Sign Up

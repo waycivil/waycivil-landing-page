@@ -1,0 +1,37 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout
+  title="Not Found | WayCivil"
+  description="The page you're looking for doesn't exist."
+>
+  <section class="flex min-h-screen items-center justify-center px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      {/* 404 Number */}
+      <h1 class="text-9xl font-bold text-primary">404</h1>
+
+      {/* Message */}
+      <h2 class="mt-8 text-3xl font-bold text-foreground">Page Not Found</h2>
+      <p class="mt-4 text-lg text-foreground/60">
+        Sorry, we couldn't find the page you're looking for.
+      </p>
+
+      {/* Actions */}
+      <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
+        <a
+          href="/"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-primary-hover"
+        >
+          Go back home
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center rounded-md border border-border px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary-hover hover:text-primary-hover"
+        >
+          Contact us
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

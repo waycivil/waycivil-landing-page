@@ -1,5 +1,7 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer.astro";
 import "../styles/global.css";
 
 interface Props {
@@ -83,12 +85,16 @@ const structuredData = {
       type="application/ld+json"
       set:html={JSON.stringify(structuredData)}
     />
+
+    <!-- View Transitions for smooth navigation -->
+    <ViewTransitions />
   </head>
   <body class="relative w-full h-full m-0 min-h-screen flex flex-col">
     <Navbar privateSiteUrl={privateSiteUrl} client:load />
-    <main class="flex-1">
+    <main class="flex-1 mt-17">
       <slot />
     </main>
+    <Footer />
   </body>
 </html>
 
