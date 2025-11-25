@@ -1,5 +1,5 @@
+import type { DropdownItemType } from "@/types/DropdownItems";
 import { NavigationMenuLink } from "@radix-ui/react-navigation-menu";
-import type { DropdownItemType } from "./NavbarDropdown";
 
 interface DropdownItemProps {
   item: DropdownItemType;

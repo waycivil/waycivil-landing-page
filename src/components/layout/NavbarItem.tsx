@@ -6,9 +6,13 @@ interface Props {
 }
 
 const NavbarItem: FC<Props> = ({ route, label }) => {
+  // Detectar si la ruta es absoluta (URL completa) o relativa
+  const isAbsoluteUrl = route.startsWith("http://") || route.startsWith("https://");
+  const href = isAbsoluteUrl ? route : `/${route}`;
+
   return (
     <a
-      href={`/${route}`}
+      href={href}
       className="group relative text-sm text-subtitle transition-colors hover:text-primary-hover hover:cursor-pointer
              py-6"
     >

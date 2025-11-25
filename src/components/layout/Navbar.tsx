@@ -5,51 +5,72 @@ import NavbarItem from "./NavbarItem";
 import { Menu, X } from "lucide-react";
 import Sidebar from "./Sidebar";
 
-const Navbar = () => {
+interface NavbarProps {
+  privateSiteUrl: string;
+}
+
+const Navbar = ({ privateSiteUrl }: NavbarProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed h-17 top-0 w-full border-b border-border bg-background/80 backdrop-blur-lg z-50">
-      <div className="max-w-content mx-auto flex items-center justify-between px-6">
-        {/* Logo */}
-        <Logo />
+    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg z-50 h-17">
+      <div className=" min-h-screen flex flex-col w-full">
+        <div className="max-w-content mx-auto w-full flex items-center justify-between px-6 transition-all">
+          {/* Logo */}
+          <Logo />
 
-        {/* Center Items */}
-        <div className="hidden full:flex items-center gap-6">
-          <NavbarDropdown />
-          <NavbarItem route="pricing" label="Pricing" />
-          <NavbarItem route="about" label="About" />
+          {/* Center Items */}
+          <div
+            className={`${
+              isMobileMenuOpen ? "hidden" : "hidden full:flex"
+            } items-center gap-6`}
+          >
+            <NavbarDropdown />
+            <NavbarItem route="pricing" label="Pricing" />
+            <NavbarItem route="about" label="About" />
+          </div>
+
+          {/* Right Items */}
+          <div
+            className={`${
+              isMobileMenuOpen ? "hidden" : "hidden full:flex"
+            } items-center gap-6`}
+          >
+            <NavbarItem route="contact" label="Contact" />
+            <NavbarItem route={`${privateSiteUrl}/login`} label="Log In" />
+            <a href={`${privateSiteUrl}/signup`}>
+              <button
+                className="bg-primary text-foreground hover:bg-primary-hover h-8 text-sm font-bold px-3 rounded-md
+                cursor-pointer"
+              >
+                Sign Up
+              </button>
+            </a>
+          </div>
+
+          {/* Toggle sidebar */}
+          <button
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+            className={`${
+              isMobileMenuOpen ? " block" : "full:hidden"
+            } text-foreground  hover:cursor-pointer transition-all duration-200 hover:rotate-90 my-6`}
+            aria-label="Toggle menu"
+          >
+            {!isMobileMenuOpen ? (
+              <Menu className="h-5 w-5" />
+            ) : (
+              <X className="h-5 w-5" />
+            )}
+          </button>
         </div>
 
-        {/* Right Items */}
-        <div className="hidden full:flex items-center gap-6">
-          <NavbarItem route="contact" label="Contact" />
-          <NavbarItem route="login" label="Log In" />
-          <a href="/signup">
-            <button
-              className="bg-primary text-white hover:bg-primary-hover h-8 text-sm font-bold px-3 rounded-md
-             cursor-pointer"
-            >
-              Sign Up
-            </button>
-          </a>
-        </div>
-
-        {/* Toggle sidebar */}
-        <button
-          onClick={() => setIsMobileMenuOpen(true)}
-          className="text-foreground full:hidden hover:cursor-pointer transition-all duration-200 hover:rotate-90 my-6"
-          aria-label="Toggle menu"
-        >
-          <Menu className="h-5 w-5" />
-        </button>
+        {/* Sidebar menu */}
+        <Sidebar
+          privateSiteUrl={privateSiteUrl}
+          isMobileMenuOpen={isMobileMenuOpen}
+          setIsMobileMenuOpen={setIsMobileMenuOpen}
+        />
       </div>
-
-      {/* Sidebar menu */}
-      <Sidebar
-        isOpen={isMobileMenuOpen}
-        setIsMobileMenuOpen={setIsMobileMenuOpen}
-      />
     </nav>
   );
 };
