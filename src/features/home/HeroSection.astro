@@ -1,0 +1,50 @@
+---
+// HeroSection component - Hero section with background effects
+import HeroBackground from "./HeroBackground.astro";
+---
+
+<HeroBackground>
+  <div class="relative z-10 mx-auto max-w-content px-6 py-32 text-center">
+    <h1
+      class="mb-6 text-balance font-sans text-4xl tablet:text-5xl font-bold leading-tight tracking-tight text-foreground
+      laptop:text-6xl full:text-7xl"
+    >
+      Welcome to the future of{" "}
+      <span
+        class="bg-linear-to-r from-primary to-[#C2410C] bg-clip-text text-transparent"
+      >
+        civil engineering
+      </span>
+    </h1>
+
+    <p
+      class="mx-auto mb-10 max-w-2xl text-pretty text-base tablet:text-lg leading-relaxed text-subtitle laptop:text-xl"
+    >
+      Get ready to start contributing to the future of civil engineering
+      reviews. Select what you want to do.
+    </p>
+
+    <!-- Buttons -->
+    <div
+      class="flex flex-col items-center justify-center gap-4 tablet:flex-row w-full"
+    >
+      <a href="/plan-reviews" class="w-full tablet:w-fit">
+        <button
+          class="bg-primary text-sm rounded-md font-medium text-foreground hover:bg-primary-hover px-6 h-10
+        cursor-pointer w-full tablet:w-fit"
+        >
+          Start reviewing
+        </button>
+      </a>
+      <a href="/contact" class="w-full tablet:w-fit">
+        <button
+          class="text-foreground hover:border-primary px-6 h-10 text-sm font-medium rounded-md
+            cursor-pointer border-border border transition-all hover:text-primary w-full tablet:w-fit"
+        >
+          Contact sales
+        </button>
+      </a>
+    </div>
+  </div>
+</HeroBackground>
+

@@ -32,6 +32,28 @@ const Sidebar: FC<Props> = ({
     return () => window.removeEventListener("resize", handleResize);
   }, [isMobileMenuOpen, setIsMobileMenuOpen]);
 
+  /* Ocultar el scroll del contenido de fondo cuando el menú móvil está abierto */
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      const scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+    } else {
+      const scrollY = document.body.style.top;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+    }
+
+    return () => {
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <section
       className={`bg-background max-h-[800px] flex flex-col justify-between w-full ${
@@ -47,7 +69,8 @@ const Sidebar: FC<Props> = ({
             className="w-full border-b border-border"
           >
             <AccordionItem value="item-1">
-              <AccordionTrigger className="text-lg cursor-pointer hover:no-underline hover:text-primary-hover">
+              <AccordionTrigger className="text-base tablet:text-lg cursor-pointer hover:no-underline hover:text-primary-hover
+               py-3 tablet:py-4">
                 Services
               </AccordionTrigger>
               <AccordionContent className="flex flex-col gap-4 text-balance">
