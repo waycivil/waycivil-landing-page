@@ -1,6 +1,8 @@
 ---
 // HeroSection component - Hero section with background effects
+import { BorderBeam } from "@/components/ui/border-beam";
 import HeroBackground from "./HeroBackground.astro";
+import SpecialButton from "./SpecialButton";
 ---
 
 <HeroBackground>
@@ -36,15 +38,15 @@ import HeroBackground from "./HeroBackground.astro";
           Start reviewing
         </button>
       </a>
-      <a href="/contact" class="w-full tablet:w-fit">
-        <button
-          class="text-foreground hover:border-primary px-6 h-10 text-sm font-medium rounded-md
-            cursor-pointer border-border border transition-all hover:text-primary w-full tablet:w-fit"
+      <!-- <a href="/contact" class="w-full tablet:w-fit">
+        <Button
+          className="text-foreground hover:border-primary px-6 h-10 text-sm font-medium rounded-md"
+          client:load
         >
-          Contact sales
-        </button>
-      </a>
+          Hola
+        </Button>
+      </a> -->
+      <SpecialButton client:load/>
     </div>
   </div>
 </HeroBackground>
-

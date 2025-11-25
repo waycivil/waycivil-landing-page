@@ -1,0 +1,58 @@
+---
+// WhyWaycivil component - Why choose WayCivil section
+import FeatureBox from "./FeatureBox";
+
+const features = [
+  {
+    iconName: "target" as const,
+    title: "Reviews in seconds",
+    description: "Upload your PDF and get instant AI feedback",
+  },
+  {
+    iconName: "zap" as const,
+    title: "Trained with 1,000+ real plans",
+    description: "Built from real QC mistakes, not just LLM prompts.",
+  },
+  {
+    iconName: "shield" as const,
+    title: "24/7 available",
+    description: "Always ready when your project needs it.",
+  },
+];
+---
+
+<section class="w-full bg-background px-6 pt-0 tablet:pt-4 full:pt-4 pb-24">
+  <div class="mx-auto max-w-7xl">
+    <div
+      class="mb-4 text-center text-sm font-medium uppercase tracking-wider text-primary"
+    >
+      Why WayCivil
+    </div>
+
+    <h2
+      class="mb-4 text-center text-4xl font-bold text-foreground laptop:text-5xl"
+    >
+      AI-Powered Optimization Tool
+    </h2>
+
+    <p
+      class="mx-auto mb-16 max-w-3xl text-center text-base tablet:text-lg leading-relaxed text-subtitle"
+    >
+      Reduce review time by 90% with AI technology that ensures consistent
+      quality across all projects.
+    </p>
+
+    <div class="grid gap-5 full:gap-8 laptop:grid-cols-3">
+      {
+        features.map((feature) => (
+          <FeatureBox
+            iconName={feature.iconName}
+            title={feature.title}
+            description={feature.description}
+            client:load
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
