@@ -1,0 +1,49 @@
+---
+// WhyWaycivil component - Who is this for section
+import TitleSection from "@/components/TitleSection.astro";
+import FeatureBox from "./FeatureBox";
+
+const features = [
+  {
+    iconName: "route" as const,
+    title: "Roadway Engineers",
+    description:
+      "Run full QC on your roadway sets with AI trained to follow your specific DOT or municipality standards.",
+  },
+  {
+    iconName: "droplets" as const,
+    title: "Drainage / Stormwater",
+    description:
+      "Review your drainage plans, reports, results and tables in seconds",
+  },
+  {
+    iconName: "map" as const,
+    title: "Land Development",
+    description:
+      "Verify your grading meets ADA, your drainage drain positively, and your plans follow your client criteria.",
+  },
+];
+---
+
+<section class="w-full bg-background px-6 pt-12 tablet:pt-24 pb-24">
+  <div class="mx-auto max-w-7xl">
+    <TitleSection
+      title="WHO IS THIS FOR?"
+      subtitle="Designed for Civil Professionals"
+      content="Built by engineers for consultants, reviewers, or public organizations (municipalities, DOT, state organizations)."
+    />
+
+    <div class="grid gap-5 full:gap-8 laptop:grid-cols-3">
+      {
+        features.map((feature) => (
+          <FeatureBox
+            iconName={feature.iconName}
+            title={feature.title}
+            description={feature.description}
+            client:load
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

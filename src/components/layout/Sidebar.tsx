@@ -69,8 +69,10 @@ const Sidebar: FC<Props> = ({
             className="w-full border-b border-border"
           >
             <AccordionItem value="item-1">
-              <AccordionTrigger className="text-base tablet:text-lg cursor-pointer hover:no-underline hover:text-primary-hover
-               py-3 tablet:py-4">
+              <AccordionTrigger
+                className="text-base tablet:text-lg cursor-pointer hover:no-underline hover:text-primary-hover
+               py-3 tablet:py-4"
+              >
                 Services
               </AccordionTrigger>
               <AccordionContent className="flex flex-col gap-4 text-balance">
@@ -95,7 +97,10 @@ const Sidebar: FC<Props> = ({
             Sign Up
           </button>
         </a>
-        <a className="w-full" href={`${privateSiteUrl}/login`}>
+        <a
+          className="w-full transition-all duration-200 hover:shadow-[0_0_20px_rgba(249,115,22,0.5)]"
+          href={`${privateSiteUrl}/login`}
+        >
           <button
             className=" text-foreground hover:border-primary h-8 text-sm font-bold px-3 rounded-md
            cursor-pointer w-full border-border border transition-all hover:text-primary bg-background"

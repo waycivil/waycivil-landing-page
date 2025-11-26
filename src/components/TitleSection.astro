@@ -1,0 +1,19 @@
+---
+const { title, subtitle, content } = Astro.props;
+---
+
+<div
+  class="mb-4 text-center text-sm font-medium uppercase tracking-wider text-primary"
+>
+  {title}
+</div>
+
+<h2 class="mb-4 text-center text-4xl font-bold text-foreground laptop:text-5xl">
+  {subtitle}
+</h2>
+
+<p
+  class="mx-auto mb-16 max-w-3xl text-center text-base tablet:text-lg leading-relaxed text-subtitle"
+>
+  {content}
+</p>
