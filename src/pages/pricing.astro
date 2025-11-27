@@ -1,4 +1,5 @@
 ---
+import PricingSection from "@/features/pricing/PricingSection";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -6,7 +7,33 @@ import Layout from "../layouts/Layout.astro";
   title="Pricing | WayCivil"
   description="Transparent pricing for AI-powered civil engineering QC plan reviews. Get custom AI models tailored to your company's standards."
 >
-  <section class="bg-primary/30 h-full">
-    <div class="mx-auto w-full max-w-content">Pricing</div>
+  <section
+    class="relative w-full h-full overflow-hidden bg-linear-to-b from-[#1a0c06] via-[#0f0805] to-background py-24 pt-32"
+  >
+    <!-- Orange layer -->
+    <div
+      class="absolute inset-0
+      bg-[radial-gradient(ellipse_at_top,rgba(249,115,22,0.15)_0%,rgba(194,65,12,0.08)_40%,transparent_70%)]"
+    >
+    </div>
+
+    <!-- Content Page -->
+    <div class="mx-auto w-full max-w-content relative z-10 px-6 h-full flex flex-col items-center gap-12">
+      <!-- Title -->
+      <div class="flex flex-col items-center gap-4">
+        <h1
+          class="text-4xl font-bold text-foreground laptop:text-5xl text-center"
+        >
+          Choose Your Plan
+        </h1>
+        <p class="mx-auto max-w-2xl text-lg text-subtitle text-center">
+          Select the perfect plan for your needs. Upgrade, downgrade, or cancel
+          anytime.
+        </p>
+      </div>
+
+      <!-- Pricing Section -->
+      <PricingSection client:visible />
+    </div>
   </section>
 </Layout>

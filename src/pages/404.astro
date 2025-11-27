@@ -6,10 +6,20 @@ import Layout from "@/layouts/Layout.astro";
   title="Not Found | WayCivil"
   description="The page you're looking for doesn't exist."
 >
-  <section class="flex min-h-screen items-center justify-center px-6">
-    <div class="mx-auto max-w-2xl text-center">
+  <section
+    class="flex min-h-screen items-center justify-center px-6
+      relative before:content-[''] before:absolute before:h-168 before:blur-[5rem]
+      before:z-1 before:inset-0 before:-top-[40%] before:-left-[20%]
+      before:bg-[radial-gradient(69.2%_43.16%_at_50.5%_48.63%,rgba(249,115,22,0.2)_0%,rgba(17,17,17,0)_100%),radial-gradient(20.5%_53.84%_at_59.81%_34%,rgba(249,115,22,0.3)_0%,rgba(17,17,17,0)_100%)]
+      before:bg-no-repeat before:bg-center before:m-auto"
+  >
+    <div class="mx-auto max-w-content text-center">
       {/* 404 Number */}
-      <h1 class="text-9xl font-bold text-primary">404</h1>
+      <h1
+        class="text-9xl tablet:text-[160px] full:text-[320px] font-bold text-foreground relative z-1000 full:-mb-10"
+      >
+        404
+      </h1>
 
       {/* Message */}
       <h2 class="mt-8 text-3xl font-bold text-foreground">Page Not Found</h2>
