@@ -1,4 +1,4 @@
-import type { PricingPlan } from "./types";
+import type { ComparisonCategoryType, PricingPlan } from "./types";
 
 export const plans: PricingPlan[] = [
   {
@@ -25,12 +25,67 @@ export const plans: PricingPlan[] = [
       "Unlimited plan reviews",
       "Unlimited members in your organization",
       "Custom AI models",
-      "Dedicated account manager",
+      "Custom prompts",
       "24/7 phone support",
     ],
     cta: "Contact Sales",
     highlighted: true,
     showAnnualBadge: true,
     route: "contact",
+  },
+];
+
+export const comparisonFeatures: ComparisonCategoryType[] = [
+  {
+    category: "Plan Reviews",
+    features: [
+      {
+        name: "Plan reviews per month",
+        free: "5",
+        enterprise: "Unlimited",
+      },
+      { name: "Review history", free: true, enterprise: true },
+      { name: "Custom propmts", free: false, enterprise: true },
+      { name: "Custom AI models", free: false, enterprise: true },
+    ],
+  },
+  /* {
+    category: "Compliance & Analysis",
+    features: [
+      {
+        name: "Basic compliance checking",
+        free: true,
+        enterprise: true,
+      },
+      {
+        name: "Advanced compliance checking",
+        free: false,
+        enterprise: true,
+      },
+      {
+        name: "Custom compliance rules",
+        free: false,
+        enterprise: true,
+      },
+      {
+        name: "Automated report generation",
+        free: false,
+        enterprise: true,
+      },
+    ],
+  }, */
+  {
+    category: "Support & Services",
+    features: [
+      { name: "Email support", free: true, enterprise: true },
+      { name: "Priority support", free: false, enterprise: true },
+      { name: "Phone support", free: false, enterprise: true },
+      {
+        name: "Dedicated account manager",
+        free: false,
+        enterprise: true,
+      },
+      { name: "Team collaboration", free: false, enterprise: true },
+    ],
   },
 ];

@@ -8,3 +8,12 @@ export interface PricingPlan {
   route: string;
   showAnnualBadge: boolean;
 }
+
+export interface ComparisonCategoryType {
+  category: string;
+  features: {
+    name: string;
+    free: string | boolean;
+    enterprise: string | boolean;
+  }[];
+}

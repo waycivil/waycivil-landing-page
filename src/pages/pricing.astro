@@ -1,6 +1,8 @@
 ---
-import PricingSection from "@/features/pricing/PricingSection";
+import PricingPlans from "@/features/pricing/PricingPlans";
 import Layout from "../layouts/Layout.astro";
+import PlansComparisons from "@/features/pricing/PlansComparisons";
+import CustomSolution from "@/features/pricing/CustomSolution";
 ---
 
 <Layout
@@ -18,9 +20,11 @@ import Layout from "../layouts/Layout.astro";
     </div>
 
     <!-- Content Page -->
-    <div class="mx-auto w-full max-w-content relative z-10 px-6 h-full flex flex-col items-center gap-12">
+    <div
+      class="mx-auto w-full max-w-content relative z-10 h-full flex flex-col items-center gap-12"
+    >
       <!-- Title -->
-      <div class="flex flex-col items-center gap-4">
+      <div class="flex flex-col items-center gap-4 px-6 maxwidth:px-0">
         <h1
           class="text-4xl font-bold text-foreground laptop:text-5xl text-center"
         >
@@ -32,8 +36,14 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
 
-      <!-- Pricing Section -->
-      <PricingSection client:visible />
+      <!-- Pricing Plans -->
+      <PricingPlans client:visible />
+
+      <!-- PlansComparisons -->
+      <PlansComparisons client:visible />
+
+      <!-- Custom Solution Card -->
+      <CustomSolution client:visible />
     </div>
   </section>
 </Layout>

@@ -14,11 +14,11 @@ const Navbar = ({ privateSiteUrl }: NavbarProps) => {
 
   return (
     <nav
-      className={`absolute top-0 w-full bg-background/80 backdrop-blur-lg z-50 ${
+      className={`fixed top-0 w-full bg-background/80 backdrop-blur-lg z-50 ${
         isMobileMenuOpen ? " h-screen" : "h-17"
       }`}
     >
-      <div className="max-w-content mx-auto w-full flex items-center justify-between px-6 transition-all h-17">
+      <div className="max-w-content mx-auto w-full flex items-center justify-between px-6 maxwidth:px-0 transition-all h-17">
         {/* Logo */}
         <Logo />
 

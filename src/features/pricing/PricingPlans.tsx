@@ -3,12 +3,12 @@ import PricingBtnOption from "./PricingBtnOption";
 import { plans } from "./constants";
 import PricingOpt from "./PricingOpt";
 
-const PricingSection = () => {
+const PricingPlans = () => {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "annual">(
     "monthly"
   );
   return (
-    <div className=" flex-col justify-center flex items-center gap-12">
+    <div className=" flex-col justify-center flex items-center gap-12 px-6 maxwidth:px-0">
       {/* Buttons */}
       <div className="inline-flex rounded-lg border border-container bg-background/50 p-1">
         <PricingBtnOption
@@ -42,4 +42,4 @@ const PricingSection = () => {
   );
 };
 
-export default PricingSection;
+export default PricingPlans;
