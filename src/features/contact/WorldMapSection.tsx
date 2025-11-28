@@ -4,8 +4,11 @@ import { Mail, PhoneCall, Shield } from "lucide-react";
 const WorldMapSection = () => {
   return (
     <section className=" w-full bg-background pt-10 pb-20">
-      <div className=" w-full max-w-content mx-auto px-6 maxwidth:px-0 laptop:overflow-hidden">
-        <div className=" w-full relative laptop:mt-10 full:-mt-20 hidden tablet:block">
+      <div
+        className=" w-full max-w-content mx-auto px-6 maxwidth:px-0 laptop:overflow-y-hidden
+       mask-[linear-gradient(to_bottom,transparent,white_10%,white_90%)]"
+      >
+        <div className=" w-full relative full:-mt-20 hidden tablet:block">
           <WorldMap
             dots={[
               {
@@ -34,7 +37,7 @@ const WorldMapSection = () => {
           {/* Buttons - Full Laptop */}
           <div
             className="full:flex flex-col gap-5 full:gap-8 laptop:flex-row justify-center absolute bottom-0 hidden
-         left-[50%] -translate-x-1/2"
+         left-[50%] -translate-x-1/2 z-1000"
           >
             {/* Box 1 */}
             <div
