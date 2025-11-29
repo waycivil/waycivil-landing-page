@@ -1,7 +1,8 @@
 ---
 import ContactTitleSection from "@/features/contact/ContactTitleSection.astro";
-import Layout from "../layouts/Layout.astro";
 import WorldMapSection from "@/features/contact/WorldMapSection";
+import ButtonsMobile from "@/features/contact/ButtonsMobile";
+import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout
@@ -11,5 +12,6 @@ import WorldMapSection from "@/features/contact/WorldMapSection";
   <section class="bg-primary/30 h-full">
     <ContactTitleSection />
     <WorldMapSection client:load />
+    <ButtonsMobile client:load />
   </section>
 </Layout>

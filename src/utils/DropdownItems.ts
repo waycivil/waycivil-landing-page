@@ -4,8 +4,8 @@ import { BarChart3, Calculator, FileCheck, MessageCircle } from "lucide-react";
 export const services: DropdownItemType[] = [
   {
     icon: FileCheck,
-    route: "plan-reviews",
-    title: "Review plans",
+    route: "quality-checks",
+    title: "Quality Checks",
     description: "Review your civil plans in seconds",
     enabled: true,
   },

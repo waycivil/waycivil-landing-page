@@ -19,7 +19,7 @@ const ContactSection = () => {
 
           {/* Buttons */}
           <div className="flex flex-col items-start gap-4 tablet:flex-row">
-            <a href="/plan-reviews" className="w-full tablet:w-fit">
+            <a href="/quality-checks" className="w-full tablet:w-fit">
               <button
                 className="bg-primary text-sm rounded-md font-medium text-foreground hover:bg-primary-hover px-6 py-2.5
         cursor-pointer w-full tablet:w-fit"
