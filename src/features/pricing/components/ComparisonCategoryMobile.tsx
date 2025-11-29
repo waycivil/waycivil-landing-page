@@ -1,6 +1,6 @@
 import type { FC } from "react";
-import type { ComparisonCategoryType } from "./types";
-import { renderFeatureValue } from "./utils/renderFeatureValue";
+import type { ComparisonCategoryType } from "../types/types";
+import { renderFeatureValue } from "../utils/renderFeatureValue";
 
 interface Props {
   selectedComparisonPlan: "free" | "enterprise";

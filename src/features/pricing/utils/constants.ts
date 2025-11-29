@@ -1,4 +1,4 @@
-import type { ComparisonCategoryType, PricingPlan } from "./types";
+import type { ComparisonCategoryType, PricingPlan } from "../types/types";
 
 export const plans: PricingPlan[] = [
   {

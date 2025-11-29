@@ -1,18 +1,17 @@
-import { Controller, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import {
   Field,
-  FieldDescription,
   FieldError,
   FieldGroup,
   FieldLabel,
 } from "@/components/ui/field";
-import type { ContactFormData } from "./contact-form.types";
-import { contactFormSchema } from "./contact-form.schema";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Check } from "lucide-react";
+import { Controller, useForm } from "react-hook-form";
+import { contactFormSchema } from "../types/contact-form.schema";
+import type { ContactFormData } from "../types/contact-form.types";
 
 const ContactForm = () => {
   const { reset } = useForm();
@@ -39,9 +38,7 @@ const ContactForm = () => {
       className="rounded-2xl group relative p-px w-full tablet:max-w-xl overflow-hidden
      bg-linear-to-b  from-white/10 to-black/0"
     >
-      <div
-        className="px-6 pb-5 pt-16 rounded-2xl backdrop-blur-sm bg-linear-to-b from-black/80 to-black/50"
-      >
+      <div className="px-6 pb-5 pt-16 rounded-2xl backdrop-blur-sm bg-linear-to-b from-black/80 to-black/50">
         <form
           id="contact-form"
           onSubmit={form.handleSubmit(onSubmit)}

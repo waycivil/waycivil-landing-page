@@ -7,9 +7,9 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { ComparisonCategory } from "./ComparisonCategory";
-import { comparisonFeatures } from "./constants";
 import { useState } from "react";
 import ComparisonCategoryMobile from "./ComparisonCategoryMobile";
+import { comparisonFeatures } from "../utils/constants";
 
 const PlansComparisons = () => {
   const [selectedComparisonPlan, setSelectedComparisonPlan] = useState<

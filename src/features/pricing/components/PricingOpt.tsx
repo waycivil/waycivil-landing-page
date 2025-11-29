@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import type { PricingPlan } from "./types";
+import type { PricingPlan } from "../types/types";
 import { Check } from "lucide-react";
 import OrangeButton from "@/components/OrangeButton";
 

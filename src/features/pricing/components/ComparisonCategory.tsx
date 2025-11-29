@@ -1,7 +1,7 @@
-import type { FC } from "react";
-import type { ComparisonCategoryType } from "./types";
 import { TableCell, TableRow } from "@/components/ui/table";
-import { renderFeatureValue } from "./utils/renderFeatureValue";
+import type { FC } from "react";
+import type { ComparisonCategoryType } from "../types/types";
+import { renderFeatureValue } from "../utils/renderFeatureValue";
 
 export const ComparisonCategory: FC<ComparisonCategoryType> = ({
   category,

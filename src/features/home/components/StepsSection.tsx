@@ -1,4 +1,4 @@
-import SingleStep from "@/features/home/SingleStep";
+import SingleStep from "./SingleStep";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 

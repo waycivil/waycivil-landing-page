@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PricingBtnOption from "./PricingBtnOption";
-import { plans } from "./constants";
+import { plans } from "../utils/constants";
 import PricingOpt from "./PricingOpt";
 
 const PricingPlans = () => {
