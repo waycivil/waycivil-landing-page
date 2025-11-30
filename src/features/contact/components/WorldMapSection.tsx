@@ -53,7 +53,12 @@ const WorldMapSection = () => {
               <p className="mb-4 text-sm tablet:text-base leading-relaxed text-subtitle">
                 Schedule a call with us
               </p>
-              <a href="/quality-checks" className="w-full">
+              <a
+                href={import.meta.env.PUBLIC_CALENDLY}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
+              >
                 <button
                   className="bg-primary text-sm rounded-md font-medium text-foreground hover:bg-primary-hover px-6 py-2.5
                   cursor-pointer w-full tablet:w-fit"
