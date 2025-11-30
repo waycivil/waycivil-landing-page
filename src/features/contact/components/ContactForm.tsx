@@ -12,9 +12,10 @@ import { Check } from "lucide-react";
 import { Controller, useForm } from "react-hook-form";
 import { contactFormSchema } from "../types/contact-form.schema";
 import type { ContactFormData } from "../types/contact-form.types";
+import { useContactForm } from "../hooks/useContactForm";
 
 const ContactForm = () => {
-  const { reset } = useForm();
+  const { submitContact, isLoading } = useContactForm();
 
   /* Inicialización del Form */
   const form = useForm<ContactFormData>({
@@ -29,8 +30,10 @@ const ContactForm = () => {
 
   /* Submit */
   const onSubmit = async (data: ContactFormData) => {
-    console.log("Form data:", data);
-    reset();
+    const result = await submitContact(data);
+    if (result.success) {
+      form.reset();
+    }
   };
 
   return (
@@ -170,11 +173,12 @@ const ContactForm = () => {
             {/* Talk to WayCivil */}
             <Field orientation="horizontal" className="w-full">
               <Button
-                className=" hover:bg-primary-hover cursor-pointer w-full"
+                className=" hover:bg-primary-hover cursor-pointer w-full disabled:cursor-not-allowed"
                 type="submit"
                 form="contact-form"
+                disabled={isLoading}
               >
-                Submit
+                {isLoading ? "Sending..." : "Submit"}
               </Button>
             </Field>
           </FieldGroup>
