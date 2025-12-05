@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+  lastUpdated: string;
+}
+
+const { title, lastUpdated } = Astro.props;
+---
+
+<section
+  class="bg-background mx-auto max-w-content px-6 maxwidth:px-0 py-32 flex flex-col gap-8 h-full"
+>
+  <!-- Title section -->
+  <div class="space-y-6">
+    <h1 class="text-4xl font-bold text-foreground laptop:text-5xl">
+      {title}
+    </h1>
+    <p class="text-base tablet:text-lg text-subtitle">
+      Last updated: {lastUpdated}
+    </p>
+    <div class="h-px bg-container"></div>
+  </div>
+
+  <!-- Content section -->
+  <div class="h-full grid grid-cols-1 gap-12 full:grid-cols-[280px_1fr]">
+    <slot />
+  </div>
+</section>

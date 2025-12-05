@@ -1,4 +1,7 @@
 ---
+import LegalLayout from "@/features/legal/components/LegalLayout.astro";
+import PrivacyContent from "@/features/legal/components/PrivacyContent.astro";
+import PrivacyIndex from "@/features/legal/components/PrivacyIndex";
 import Layout from "@/layouts/Layout.astro";
 ---
 
@@ -6,7 +9,10 @@ import Layout from "@/layouts/Layout.astro";
   title="Privacy Policy | WayCivil"
   description="WayCivil's Privacy Policy explaining how we collect, use, and protect your personal information."
 >
-  <section class="bg-primary/30 h-full">
-    <div class="mx-auto w-full max-w-content">Privacy Policy</div>
+  <section class="bg-background h-full">
+    <LegalLayout title="Privacy Policy" lastUpdated="December 5, 2025">
+      <PrivacyIndex client:load />
+      <PrivacyContent />
+    </LegalLayout>
   </section>
 </Layout>

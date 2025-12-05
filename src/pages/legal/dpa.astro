@@ -1,4 +1,7 @@
 ---
+import DPAContent from "@/features/legal/components/DPAContent.astro";
+import DPAIndex from "@/features/legal/components/DPAIndex";
+import LegalLayout from "@/features/legal/components/LegalLayout.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
@@ -6,7 +9,13 @@ import Layout from "@/layouts/Layout.astro";
   title="Data Processing Addendum | WayCivil"
   description="WayCivil's Data Processing Addendum outlining how we handle and protect your data."
 >
-  <section class="bg-primary/30 h-full">
-    <div class="mx-auto w-full max-w-content">Data Processing Addendum</div>
+  <section class="bg-background h-full">
+    <LegalLayout
+      title="Data Processing Addendum"
+      lastUpdated="December 5, 2025"
+    >
+      <DPAIndex client:load />
+      <DPAContent />
+    </LegalLayout>
   </section>
 </Layout>
