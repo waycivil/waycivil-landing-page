@@ -1,12 +1,15 @@
 ---
+import HeroSection from "@/features/quality-checks/components/HeroSection.astro";
 import Layout from "../layouts/Layout.astro";
+import ThreeReasons from "@/features/quality-checks/components/ThreeReasons.astro";
 ---
 
 <Layout
   title="AI QC Plan Reviews | WayCivil"
   description="Review your civil engineering QC plans in minutes with custom AI models trained on your company's standards and requirements."
 >
-  <section class="bg-primary/30 h-full">
-    <div class="mx-auto w-full max-w-content">Plan Reviews</div>
+  <section class="bg-background h-full">
+    <HeroSection />
+    <ThreeReasons />
   </section>
 </Layout>

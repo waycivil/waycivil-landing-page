@@ -1,0 +1,39 @@
+---
+import FeatureBox from "@/features/home/components/FeatureBox";
+
+const features = [
+  {
+    iconName: "org" as const,
+    title: "Custom AI Review Models",
+    description:
+      "Train an AI review system fully aligned with your company’s standards, criteria, and workflows.",
+  },
+  {
+    iconName: "zap" as const,
+    title: "Lightning-Fast Turnaround",
+    description:
+      "Generate complete reviews in under 5 minutes instead of spending days—or even weeks—doing them manually.",
+  },
+  {
+    iconName: "lock" as const,
+    title: "Enterprise-Grade Security",
+    description:
+      "Your projects and plans remain fully private and encrypted, accessible only to you and your team.",
+  },
+];
+---
+
+<div
+  class="mx-auto w-full max-w-content px-6 maxwidth:px-0 grid gap-5 full:gap-8 laptop:grid-cols-3"
+>
+  {
+    features.map((feature) => (
+      <FeatureBox
+        iconName={feature.iconName}
+        title={feature.title}
+        description={feature.description}
+        client:load
+      />
+    ))
+  }
+</div>

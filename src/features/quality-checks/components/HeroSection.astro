@@ -1,0 +1,53 @@
+---
+import SpecialButton from "@/features/home/components/SpecialButton";
+---
+
+<div
+  class="relative min-h-200 pt-56 full:pt-62 pb-20 bg-[url('/qc-bg.png')] bg-position-[center_-50px]
+  bg-size-[auto_140%] bg-no-repeat overflow-hidden"
+>
+  <!-- TOP GRADIENT -->
+  <div
+    class="top-0 bg-[linear-gradient(180deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0.948)_26.04%,rgba(0,0,0,0)_100%)]
+    absolute h-1/2 z-1 pointer-events-none w-full left-0"
+  >
+  </div>
+
+  <!-- BOTTOM GRADIENT -->
+  <div
+    class="-bottom-15.5 bg-[linear-gradient(0deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0.948)_26.04%,rgba(0,0,0,0)_100%)]
+    absolute h-1/2 z-1 pointer-events-none w-full left-0"
+  >
+  </div>
+
+  <!-- TITLE -->
+  <div
+    class="mx-auto w-full max-w-content px-6 maxwidth:px-0 text-foreground flex flex-col items-center laptop:gap-8
+     relative z-2 gap-4"
+  >
+    <span class="text-primary uppercase text-xl font-bold">WayCivil QC®</span>
+    <h1 class="text-center text-5xl full:text-6xl font-bold">
+      Instant QCs,<br /> Zero Setup
+    </h1>
+    <p class="text-subtitle text-base full:text-lg max-w-150 text-center mt-4">
+      Generate a full civil engineering project in seconds, create all its QCs
+      instantly, boost your team’s productivity, and save thousands of dollars
+      every year.
+    </p>
+    <!-- Buttons -->
+    <div
+      class="flex flex-col items-center justify-center gap-4 tablet:flex-row w-full"
+    >
+      <a href="/quality-checks" class="w-full tablet:w-fit">
+        <button
+          class="bg-primary text-sm rounded-md font-medium text-foreground hover:bg-primary-hover px-6 py-2.5
+        cursor-pointer w-full tablet:w-fit"
+        >
+          Get started
+        </button>
+      </a>
+
+      <SpecialButton client:load />
+    </div>
+  </div>
+</div>

@@ -1,8 +1,25 @@
 import SpotlightCard from "@/components/SpotlightCard";
-import { Droplets, Map, Route, Shield, Target, Zap } from "lucide-react";
+import {
+  Droplets,
+  Map,
+  Route,
+  Shield,
+  Target,
+  Zap,
+  LockKeyhole,
+  UsersRound,
+} from "lucide-react";
 
 interface Props {
-  iconName: "target" | "zap" | "shield" | "route" | "droplets" | "map";
+  iconName:
+    | "target"
+    | "zap"
+    | "shield"
+    | "route"
+    | "droplets"
+    | "map"
+    | "lock"
+    | "org";
   title: string;
   description: string;
 }
@@ -14,6 +31,8 @@ const iconMap = {
   route: Route,
   droplets: Droplets,
   map: Map,
+  lock: LockKeyhole,
+  org: UsersRound,
 };
 
 export default function FeatureBox({ iconName, title, description }: Props) {
