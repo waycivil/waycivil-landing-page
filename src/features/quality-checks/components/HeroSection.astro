@@ -2,10 +2,10 @@
 import SpecialButton from "@/features/home/components/SpecialButton";
 ---
 
-<div
-  class="relative min-h-200 pt-56 full:pt-62 pb-20 bg-[url('/qc-bg.png')] bg-position-[center_-50px]
-  bg-size-[auto_140%] bg-no-repeat overflow-hidden"
->
+<div class="relative min-h-200 pt-56 full:pt-62 pb-20 overflow-hidden">
+  <!-- ROTATING BACKGROUND -->
+  <div class="rotating-bg"></div>
+
   <!-- TOP GRADIENT -->
   <div
     class="top-0 bg-[linear-gradient(180deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0.948)_26.04%,rgba(0,0,0,0)_100%)]
@@ -51,3 +51,29 @@ import SpecialButton from "@/features/home/components/SpecialButton";
     </div>
   </div>
 </div>
+
+<style>
+  .rotating-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background-image: url('/qc-bg.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform-origin: center center;
+    animation: rotate 90s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+</style>
