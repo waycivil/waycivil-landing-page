@@ -2,7 +2,7 @@
 import PricingPlans from "@/features/pricing/components/PricingPlans";
 import Layout from "../layouts/Layout.astro";
 import PlansComparisons from "@/features/pricing/components/PlansComparisons";
-import CustomSolution from "@/features/pricing/components/CustomSolution";
+import CustomSolution from "@/components/CustomSolution";
 ---
 
 <Layout
@@ -43,7 +43,10 @@ import CustomSolution from "@/features/pricing/components/CustomSolution";
       <PlansComparisons client:visible />
 
       <!-- Custom Solution Card -->
-      <CustomSolution client:visible />
+      <CustomSolution
+        title="Need a custom solution?"
+        subtitle="Get in touch with our sales team to discuss enterprise plans, custom integrations, and dedicated support for your organization."
+      />
     </div>
   </section>
 </Layout>

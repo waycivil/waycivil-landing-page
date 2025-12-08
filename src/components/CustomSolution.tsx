@@ -1,6 +1,19 @@
 import SvgLogo from "@/components/SvgLogo";
+import type { FC } from "react";
 
-const CustomSolution = () => {
+interface Props {
+  title: string;
+  subtitle: string;
+  btnText?: string;
+  btnRoute?: string;
+}
+
+const CustomSolution: FC<Props> = ({
+  title,
+  subtitle,
+  btnText = "Contact Us",
+  btnRoute = "/contact",
+}) => {
   return (
     <div className="relative w-full mt-20 laptop:mt-32 mx-auto max-w-content">
       {/* Circulo exterior */}
@@ -16,20 +29,17 @@ const CustomSolution = () => {
       >
         <div className=" space-y-8">
           <div className=" space-y-3">
-            <p className="text-3xl font-semibold text-foreground">
-              Need a custom solution?
-            </p>
+            <p className="text-3xl font-semibold text-foreground">{title}</p>
             <p className="max-w-md text-balance text-sm text-foreground">
-              Get in touch with our sales team to discuss enterprise plans,
-              custom integrations, and dedicated support for your organization.
+              {subtitle}
             </p>
           </div>
-          <a href="/contact">
+          <a href={btnRoute}>
             <button
               className="bg-foreground text-background opacity-100 hover:bg-foreground/80 py-1.5 font-medium 
               text-sm px-3 rounded-md cursor-pointer shadow-black/30 shadow-md transition-all duration-200"
             >
-              Contact Us
+              {btnText}
             </button>
           </a>
         </div>
