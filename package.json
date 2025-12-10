@@ -4,8 +4,11 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build --mode development",
+    "build:qa": "astro build --mode qa",
+    "build:prod": "astro build --mode production",
     "preview": "astro preview",
+    "preview:qa": "astro preview --mode qa",
     "astro": "astro"
   },
   "dependencies": {
