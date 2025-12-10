@@ -1,12 +1,19 @@
 ---
+import HeroSection from "@/features/about/components/HeroSection.astro";
 import Layout from "../layouts/Layout.astro";
+import Mission from "@/features/about/components/Mission.astro";
+import OurStory from "@/features/about/components/OurStory.astro";
+import ContactSection from "@/features/home/components/ContactSection";
 ---
 
 <Layout
   title="About Us | WayCivil"
   description="Learn about WayCivil and our mission to revolutionize civil engineering with AI-powered QC plan reviews."
 >
-  <section class="bg-primary/30 h-full">
-    <div class="mx-auto w-full max-w-content">About</div>
+  <section class="bg-background h-full">
+    <HeroSection />
+    <Mission />
+    <OurStory />
+    <ContactSection client:load />
   </section>
 </Layout>

@@ -8,6 +8,7 @@ import {
   Zap,
   LockKeyhole,
   UsersRound,
+  Lightbulb,
 } from "lucide-react";
 
 interface Props {
@@ -19,7 +20,9 @@ interface Props {
     | "droplets"
     | "map"
     | "lock"
-    | "org";
+    | "org"
+    | "users"
+    | "lightbulb";
   title: string;
   description: string;
 }
@@ -33,6 +36,8 @@ const iconMap = {
   map: Map,
   lock: LockKeyhole,
   org: UsersRound,
+  users: UsersRound,
+  lightbulb: Lightbulb,
 };
 
 export default function FeatureBox({ iconName, title, description }: Props) {
@@ -40,7 +45,7 @@ export default function FeatureBox({ iconName, title, description }: Props) {
 
   return (
     <SpotlightCard
-      className=" rounded-2xl border border-border bg-popover/60 p-4 tablet:p-8"
+      className=" rounded-xl border border-border bg-popover/60 p-4 tablet:p-8"
       spotlightColor="rgba(249, 115, 22, 0.2)"
     >
       {/* <div className="group rounded-2xl border border-border bg-popover/60 p-4 tablet:p-8 transition-all hover:border-primary/50"> */}
