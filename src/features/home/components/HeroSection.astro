@@ -1,30 +1,47 @@
 ---
-// HeroSection component - Hero section with background effects
-import HeroBackground from "./HeroBackground.astro";
 import SpecialButton from "./SpecialButton";
 ---
 
-<HeroBackground>
-  <div class="relative z-10 mx-auto max-w-content px-6 maxwidth:px-0 py-32 text-center">
-    <h1
-      class="mb-6 text-balance font-sans text-4xl tablet:text-5xl font-bold leading-tight tracking-tight text-foreground
-      laptop:text-6xl full:text-7xl"
+<div class="relative min-h-200 pt-46 full:pt-62 pb-20 overflow-hidden">
+  <!-- ROTATING BACKGROUND -->
+  <div class="rotating-bg"></div>
+
+  <!-- TOP GRADIENT -->
+  <div
+    class="top-0 bg-[linear-gradient(180deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0.948)_26.04%,rgba(0,0,0,0)_100%)]
+    absolute h-1/2 z-1 pointer-events-none w-full left-0"
+  >
+  </div>
+
+  <!-- BOTTOM GRADIENT -->
+  <div
+    class="-bottom-15.5 bg-[linear-gradient(0deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0.948)_26.04%,rgba(0,0,0,0)_100%)]
+    absolute h-1/2 z-1 pointer-events-none w-full left-0"
+  >
+  </div>
+
+  <!-- TITLE -->
+  <div
+    class="mx-auto w-full max-w-content px-6 maxwidth:px-0 text-foreground flex flex-col items-center laptop:gap-8
+     relative z-2 gap-4"
+  >
+    <span class="text-primary uppercase text-base tablet:text-lg font-bold"
+      >WayCivil QC®</span
     >
-      Welcome to the future of{" "}
-      <span
+    <h1 class="text-center text-4xl tablet:text-5xl full:text-6xl font-bold">
+      Turn QC hours <br />
+      into <span
         class="bg-linear-to-r from-primary to-[#C2410C] bg-clip-text text-transparent"
       >
-        civil engineering
+        seconds
       </span>
     </h1>
-
     <p
-      class="mx-auto mb-10 max-w-2xl text-pretty text-base tablet:text-lg leading-relaxed text-subtitle laptop:text-xl"
+      class="text-subtitle text-sm tablet:text-base full:text-lg max-w-150 text-center mt-4"
     >
-      Get ready to start contributing to the future of civil engineering
-      reviews. Select what you want to do.
+      Try the first automatic Civil Engineering Reviewer (QC). Backed by Civil
+      PEs, results in seconds.
     </p>
-
     <!-- Buttons -->
     <div
       class="flex flex-col items-center justify-center gap-4 tablet:flex-row w-full"
@@ -41,4 +58,30 @@ import SpecialButton from "./SpecialButton";
       <SpecialButton client:load />
     </div>
   </div>
-</HeroBackground>
+</div>
+
+<style>
+  .rotating-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background-image: url("/qc-bg.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform-origin: center center;
+    animation: rotate 90s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+</style>

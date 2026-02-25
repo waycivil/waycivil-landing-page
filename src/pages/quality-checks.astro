@@ -2,7 +2,7 @@
 import HeroSection from "@/features/quality-checks/components/HeroSection.astro";
 import Layout from "../layouts/Layout.astro";
 import ThreeReasons from "@/features/quality-checks/components/ThreeReasons.astro";
-import ImagesSection from "@/features/quality-checks/components/ImagesSection.astro";
+import StepsSection from "@/features/quality-checks/components/StepsSection.tsx";
 import CustomSolution from "@/components/CustomSolution";
 import Characteristics from "@/features/quality-checks/components/Characteristics.astro";
 ---
@@ -14,7 +14,7 @@ import Characteristics from "@/features/quality-checks/components/Characteristic
   <section class="bg-background h-full pb-20 relative overflow-hidden">
     <HeroSection />
     <ThreeReasons />
-    <ImagesSection />
+    <StepsSection client:visible />
     <Characteristics />
     <CustomSolution
       title="Ready to start?"
