@@ -11,6 +11,9 @@ import {
   Lightbulb,
   Brain,
   Clock,
+  Timer,
+  GlobeLock,
+  Table,
 } from "lucide-react";
 
 interface Props {
@@ -26,7 +29,10 @@ interface Props {
     | "users"
     | "lightbulb"
     | "brain"
-    | "clock";
+    | "clock"
+    | "timer"
+    | "globelock"
+    | "table";
   title: string;
   description: string;
 }
@@ -44,6 +50,9 @@ const iconMap = {
   lightbulb: Lightbulb,
   brain: Brain,
   clock: Clock,
+  timer: Timer,
+  globelock: GlobeLock,
+  table: Table,
 };
 
 export default function FeatureBox({ iconName, title, description }: Props) {

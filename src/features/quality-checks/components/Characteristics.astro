@@ -1,40 +1,40 @@
 ---
 import { Brain, GlobeLock, Table, Timer, Users, Zap } from "lucide-react";
-import CharacteristicItem from "./CharacteristicItem";
+import FeatureBox from "@/components/FeatureBox";
 
 const characteristics = [
   {
-    Icon: Brain,
+    iconName: "brain",
     title: "Company-Aligned AI",
     description:
       "Train custom AI review models that understand and apply your company's specific standards, criteria, and workflows—no generic templates.",
   },
   {
-    Icon: Timer,
+    iconName: "timer",
     title: "5-Minute Reviews",
     description:
       "Generate complete QC plan reviews in under 5 minutes instead of spending days or weeks on manual review processes.",
   },
   {
-    Icon: Zap,
+    iconName: "zap",
     title: "Zero Configuration Required",
     description:
       "Start reviewing civil engineering projects instantly with no complex setup, integrations, or technical configuration needed.",
   },
   {
-    Icon: Users,
+    iconName: "users",
     title: "Collaborative Review Management",
     description:
       "Centralize all your QC reviews in one place where team members can manage, explore, and update AI-generated comments together in real-time.",
   },
   {
-    Icon: Table,
+    iconName: "table",
     title: "Fully Customizable Parameters",
     description:
       "Tailor each review by specifying track type, applicable standards, intensity level, and additional requirements for precise results.",
   },
   {
-    Icon: GlobeLock,
+    iconName: "globelock",
     title: "Private & Encrypted by Default",
     description:
       "Enterprise-grade security ensures your projects and plans remain fully private and encrypted, accessible only to your authorized team.",
@@ -43,15 +43,16 @@ const characteristics = [
 ---
 
 <div
-  class="mx-auto w-full max-w-content px-6 maxwidth:px-0 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 
-  gap-x-10 full:gap-x-15 gap-y-10 tablet:gap-y-15 pt-32"
+  class="mx-auto w-full max-w-content px-6 maxwidth:px-0 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3
+  gap-x-4 laptop:gap-x-10 full:gap-x-15 gap-y-10 laptop:gap-y-15 pt-32"
 >
   {
     characteristics.map((item) => (
-      <CharacteristicItem
-        Icon={item.Icon}
+      <FeatureBox
+        iconName={item.iconName as any}
         title={item.title}
         description={item.description}
+        client:load
       />
     ))
   }

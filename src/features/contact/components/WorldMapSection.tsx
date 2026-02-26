@@ -31,6 +31,36 @@ const WorldMapSection = () => {
                   lng: -5,
                 }, // España
               },
+              {
+                start: {
+                  lat: 0.8566,
+                  lng: -8.3522,
+                }, // Mali
+                end: {
+                  lat: 8.276987,
+                  lng: 55.296249,
+                }, // Dubai
+              },
+              {
+                start: {
+                  lat: -43.8688,
+                  lng: 141.2093,
+                }, // Sydney
+                end: {
+                  lat: 14.6762,
+                  lng: 109.6503,
+                }, // China
+              },
+              {
+                start: {
+                  lat: -20.8688,
+                  lng: 107.2093,
+                }, // Sydney
+                end: {
+                  lat: 45.7617,
+                  lng: 13,
+                }, // Poland
+              },
             ]}
           />
 

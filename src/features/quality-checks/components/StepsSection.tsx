@@ -47,7 +47,7 @@ const StepsSection = () => {
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
   return (
-    <section className="w-full bg-background px-6 pt-12 tablet:pt-24 pb-24">
+    <section className="w-full bg-background px-6 pb-24">
       <div className="mx-auto max-w-7xl" ref={containerRef}>
         <div ref={ref} className="relative">
           {data.map((item, index) => (
