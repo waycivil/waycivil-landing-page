@@ -1,56 +1,38 @@
----
-import FeatureBox from "@/components/FeatureBox";
----
-
 <div
-  class="mx-auto w-full max-w-content px-6 maxwidth:px-0 flex flex-col items-center gap-10"
+  class="mx-auto w-full max-w-4xl px-6 maxwidth:px-0 flex flex-col items-center gap-10"
 >
   <!-- Title -->
   <div class="text-center flex flex-col items-center gap-4">
     <p class="text-sm font-semibold uppercase tracking-wider text-primary">
-      Our mission
+      Why we're building this
     </p>
-    <h2 class="mb-2 text-3xl tablet:text-4xl font-bold laptop:text-5xl">
-      Making Quality Control Accessible
-    </h2>
-    <p
+    <!-- <p
       class="mx-auto max-w-3xl text-sm tablet:text-base laptop:text-lg leading-relaxed text-subtitle"
     >
       We believe every civil engineering project deserves thorough, consistent
       quality control. Our mission is to empower engineers with AI tools that
       enhance their expertise, reduce review time by 90%, and ensure nothing
       falls through the cracks.
-    </p>
+    </p> -->
   </div>
 
   <!-- Grid -->
-  <div class="grid gap-4 laptop:grid-cols-2 full:grid-cols-4">
-    <FeatureBox
-      client:load
-      iconName="target"
-      title="Precision"
-      description="Every detail matters in civil engineering. Our AI is trained on thousands of real-world projects to catch even the smallest issues."
-    />
-
-    <FeatureBox
-      client:load
-      iconName="users"
-      title="Collaboration"
-      description="Built by engineers for engineers. We work closely with civil engineering professionals to continuously improve our platform."
-    />
-
-    <FeatureBox
-      client:load
-      iconName="lightbulb"
-      title="Innovation"
-      description="We leverage cutting-edge AI technology to solve real problems, making civil engineering reviews faster and more reliable."
-    />
-
-    <FeatureBox
-      client:load
-      iconName="shield"
-      title="Security"
-      description="Your data stays private and secure. We build custom models that keep all your project information fully confidential."
-    />
+  <div class="grid grid-cols-1 tablet:grid-cols-2 gap-10">
+    <img src="/about-us-1.jpg" class="order-2 tablet:order-1" />
+    <div class="flex flex-col items-center gap-6 order-1 tablet:order-2">
+      <h2 class="mb-2 text-3xl tablet:text-4xl font-bold laptop:text-5xl">
+        QC shouldn't take weeks
+      </h2>
+      <p
+        class="mx-auto max-w-3xl text-sm tablet:text-base laptop:text-lg leading-relaxed text-subtitle"
+      >
+        Civil engineering QC is still manual, repetitive, and error-prone - and
+        we've experienced it firsthand at top U.S. consulting firms. After years
+        of slow review cycles and overloaded teams, we decided to rethink the
+        process. We're building automation that accelerates QC and organizes
+        reviews, so engineers can focus on better design decisions instead of
+        chasing comments.
+      </p>
+    </div>
   </div>
 </div>

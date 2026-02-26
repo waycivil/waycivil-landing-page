@@ -9,6 +9,11 @@ import {
   LockKeyhole,
   UsersRound,
   Lightbulb,
+  Brain,
+  Clock,
+  Timer,
+  GlobeLock,
+  Table,
 } from "lucide-react";
 
 interface Props {
@@ -22,7 +27,12 @@ interface Props {
     | "lock"
     | "org"
     | "users"
-    | "lightbulb";
+    | "lightbulb"
+    | "brain"
+    | "clock"
+    | "timer"
+    | "globelock"
+    | "table";
   title: string;
   description: string;
 }
@@ -38,6 +48,11 @@ const iconMap = {
   org: UsersRound,
   users: UsersRound,
   lightbulb: Lightbulb,
+  brain: Brain,
+  clock: Clock,
+  timer: Timer,
+  globelock: GlobeLock,
+  table: Table,
 };
 
 export default function FeatureBox({ iconName, title, description }: Props) {

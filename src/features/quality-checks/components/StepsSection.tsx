@@ -47,38 +47,40 @@ const StepsSection = () => {
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
   return (
-    <div className="w-full bg-background" ref={containerRef}>
-      <div ref={ref} className="relative">
-        {data.map((item, index) => (
-          <SingleStep
-            key={item.title}
-            step={index + 1}
-            title={item.title}
-            description={item.description}
-            image={item.image}
-          />
-        ))}
+    <section className="w-full bg-background px-6 pb-24">
+      <div className="mx-auto max-w-7xl" ref={containerRef}>
+        <div ref={ref} className="relative">
+          {data.map((item, index) => (
+            <SingleStep
+              key={item.title}
+              step={index + 1}
+              title={item.title}
+              description={item.description}
+              image={item.image}
+            />
+          ))}
 
-        {/* Tracking line */}
-        <div
-          style={{
-            height: height + "px",
-          }}
-          className="absolute left-6 top-0 w-0.5 overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))]
+          {/* Tracking line */}
+          <div
+            style={{
+              height: height + "px",
+            }}
+            className="absolute left-6 top-0 w-0.5 overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))]
            from-transparent from-0% via-neutral-700 to-transparent to-99% hidden laptop:block  
            gradient(to_bottom,transparent_0%,background_10%,background_90%,transparent_100%)] laptop:left-8"
-        >
-          <motion.div
-            style={{
-              height: heightTransform,
-              opacity: opacityTransform,
-            }}
-            className="absolute inset-x-0 top-0 w-0.5 rounded-full bg-linear-to-t from-primary from-0% via-[#C2410C] via-10%
+          >
+            <motion.div
+              style={{
+                height: heightTransform,
+                opacity: opacityTransform,
+              }}
+              className="absolute inset-x-0 top-0 w-0.5 rounded-full bg-linear-to-t from-primary from-0% via-[#C2410C] via-10%
              to-transparent"
-          />
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

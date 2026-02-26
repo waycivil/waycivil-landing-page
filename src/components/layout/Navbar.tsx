@@ -40,13 +40,12 @@ const Navbar = ({ privateSiteUrl }: NavbarProps) => {
           } items-center gap-6`}
         >
           <NavbarItem route="contact" label="Contact" />
-          <NavbarItem route={`${privateSiteUrl}/login`} label="Log In" />
-          <a href={`${privateSiteUrl}/signup`}>
+          <a href={`${privateSiteUrl}/login`}>
             <button
               className="bg-primary text-foreground hover:bg-primary-hover h-8 text-sm font-bold px-3 rounded-md
                 cursor-pointer"
             >
-              Sign Up
+              Use Now
             </button>
           </a>
         </div>

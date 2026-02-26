@@ -1,0 +1,49 @@
+---
+import TitleSection from "@/components/TitleSection.astro";
+import TeamMember from "./TeamMember.astro";
+
+const linkedinFelipe = import.meta.env.PUBLIC_LINKEDIN_FELIPE;
+const linkedinDaniela = import.meta.env.PUBLIC_LINKEDIN_DANIELA;
+const linkedinJeanPaul = import.meta.env.PUBLIC_LINKEDIN_JEAN_PAUL;
+const linkedinAndres = import.meta.env.PUBLIC_LINKEDIN_ANDRES;
+---
+
+<div
+  class="mx-auto w-full max-w-content px-6 maxwidth:px-0 flex flex-col items-center mt-20"
+>
+  <TitleSection
+    title="Our team"
+    subtitle="Meet our team"
+    content=" We lead with care - our core value - and a shared passion for civil engineering"
+  />
+  <div class="grid grid-cols-2 w-full gap-x-14 gap-y-8">
+    <TeamMember
+      image="/andres-del-chiaro.png"
+      name="Felipe El Forzoli"
+      role="CEO"
+      description="Civil Engineer"
+      linkedinHref={linkedinFelipe}
+    />
+    <TeamMember
+      image="/andres-del-chiaro.png"
+      name="Daniela Vasquez"
+      role="COO"
+      description="Master in Civil Engineering"
+      linkedinHref={linkedinDaniela}
+    />
+    <TeamMember
+      image="/andres-del-chiaro.png"
+      name="Jean Paul Rodríguez"
+      role="Lead AI Engineer"
+      description="Master in AI and Data Scientist"
+      linkedinHref={linkedinJeanPaul}
+    />
+    <TeamMember
+      image="/andres-del-chiaro.png"
+      name="Andrés Del Chiaro"
+      role="CTO"
+      description="Full Stack Developer"
+      linkedinHref={linkedinAndres}
+    />
+  </div>
+</div>

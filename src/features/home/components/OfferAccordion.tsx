@@ -8,21 +8,21 @@ const accordionItems = [
     title: "Custom Review Logic",
     subtitle: "Train the AI to match how your team reviews",
     content:
-      "We train specialized AI models based on your organization's specific quality control processes and review methodologies. Your model learns from your past reviews and adapts to your unique criteria, ensuring consistency across all projects while maintaining your team's established standards.",
+      "Your own QC model, trained on your past plans, markups, and reviews, so every project is checked the way your team checks it.",
   },
   {
     icon: Lock,
     title: "Private & Secure",
     subtitle: "Your model is built just for you",
     content:
-      "All your data remains completely private and secure. We deploy dedicated models for your organization that never share information with other clients. Your plans, standards, and review data are encrypted and stored in isolated environments with full compliance certifications.",
+      "All your data remains completely private and secure. Your plans, standards, and review data are encrypted and stored in isolated environments with full compliance certifications.",
   },
   {
     icon: Building2,
     title: "Company-Specific Criteria",
     subtitle: "Adapted to your client's standards",
     content:
-      "Our system seamlessly integrates your client's specific requirements, municipal standards, DOT guidelines, and company protocols. Configure custom criteria for each project, ensuring every review meets the exact specifications required by your clients and stakeholders.",
+      "Configured to match any client specs, whether it is municipal standards, DOT guidelines, or your internal QC.",
   },
 ];
 
