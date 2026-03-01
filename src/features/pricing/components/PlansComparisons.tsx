@@ -1,19 +1,18 @@
 import {
   Table,
   TableBody,
-  TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { ComparisonCategory } from "./ComparisonCategory";
 import { useState } from "react";
-import ComparisonCategoryMobile from "./ComparisonCategoryMobile";
 import { comparisonFeatures } from "../utils/constants";
+import { ComparisonCategory } from "./ComparisonCategory";
+import ComparisonCategoryMobile from "./ComparisonCategoryMobile";
 
 const PlansComparisons = () => {
   const [selectedComparisonPlan, setSelectedComparisonPlan] = useState<
-    "free" | "enterprise"
+    "free" | "pro" | "enterprise"
   >("free");
 
   return (
@@ -29,6 +28,7 @@ const PlansComparisons = () => {
           <TableRow className=" hover:bg-transparent border-b border-container">
             <TableHead className=" py-4 px-6 w-3/5">Features</TableHead>
             <TableHead className=" py-4 px-6 text-center">Free</TableHead>
+            <TableHead className=" py-4 px-6 text-center">Pro</TableHead>
             <TableHead className=" py-4 px-6 text-center">Enterprise</TableHead>
           </TableRow>
         </TableHeader>
@@ -54,6 +54,16 @@ const PlansComparisons = () => {
             }`}
           >
             Free
+          </button>
+          <button
+            onClick={() => setSelectedComparisonPlan("pro")}
+            className={`rounded-lg px-4 py-2 text-sm font-medium transition-all cursor-pointer border ${
+              selectedComparisonPlan === "pro"
+                ? "border-primary bg-primary text-foreground hover:bg-primary-hover"
+                : "border-container bg-background/50 text-foreground hover:border-primary hover:text-primary"
+            }`}
+          >
+            Pro
           </button>
           <button
             onClick={() => setSelectedComparisonPlan("enterprise")}

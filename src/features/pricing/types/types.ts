@@ -14,6 +14,7 @@ export interface ComparisonCategoryType {
   features: {
     name: string;
     free: string | boolean;
+    pro: string | boolean;
     enterprise: string | boolean;
   }[];
 }

@@ -3,7 +3,7 @@ import type { ComparisonCategoryType } from "../types/types";
 import { renderFeatureValue } from "../utils/renderFeatureValue";
 
 interface Props {
-  selectedComparisonPlan: "free" | "enterprise";
+  selectedComparisonPlan: "free" | "pro" | "enterprise";
 }
 
 const ComparisonCategoryMobile: FC<ComparisonCategoryType & Props> = ({

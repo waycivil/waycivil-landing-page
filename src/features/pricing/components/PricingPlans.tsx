@@ -33,7 +33,7 @@ const PricingPlans = () => {
       </div>
 
       {/* Pricing Options */}
-      <div className="grid grid-cols-1 gap-8 laptop:grid-cols-2">
+      <div className="grid grid-cols-1 gap-8 laptop:grid-cols-3">
         {plans.map((plan) => (
           <PricingOpt key={plan.name} billingPeriod={billingPeriod} plan={plan} />
         ))}
