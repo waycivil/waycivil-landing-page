@@ -25,6 +25,9 @@ export const ComparisonCategory: FC<ComparisonCategoryType> = ({
             {renderFeatureValue(item.free)}
           </TableCell>
           <TableCell className="py-4 px-6 text-center">
+            {renderFeatureValue(item.pro)}
+          </TableCell>
+          <TableCell className="py-4 px-6 text-center">
             {renderFeatureValue(item.enterprise)}
           </TableCell>
         </TableRow>
